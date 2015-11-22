@@ -3,11 +3,15 @@
 (when (version< emacs-version "24.1")
   (error "Wen requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
 
+;; FIXME: Reset `tramp-ssh-controlmaster-options' to fix startup slow
+;; issue since 24.5.
+(setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+
 ;; Always load newest byte code
 (setq load-prefer-newer t)
 
 ;;; Define load dir
-;;; 
+;;;
 ;; The root dir of the Emacs distribution.
 (defvar wen-dir (file-name-directory load-file-name))
 ;; The home of Wen's core functionality.
@@ -24,13 +28,12 @@
 (defvar wen-savefile-dir (expand-file-name "savefile" wen-dir))
 ;; This files contains a list of modules that will be loaded.
 (defvar wen-modules-file (expand-file-name "wen-modules.el" wen-dir))
-;;; Define load dir end ...
 
 (unless (file-exists-p wen-savefile-dir)
   (make-directory wen-savefile-dir))
 
+;; Add all level PARENT-DIR subdirs to the `load-path'.
 (defun wen-add-subfolders-to-load-path (parent-dir)
- "Add all level PARENT-DIR subdirs to the `load-path'."
  (dolist (f (directory-files parent-dir))
    (let ((name (expand-file-name f parent-dir)))
      (when (and (file-directory-p name)
@@ -50,35 +53,34 @@
 (setq large-file-warning-threshold 100000000)
 
 ;; preload the personal settings from `wen-personal-preload-dir'
-(when (file-exists-p wen-personal-preload-dir)
-  (message "Loading personal configuration files in %s..." wen-personal-preload-dir)
-  (mapc 'load (directory-files wen-personal-preload-dir 't "^[^#].*el$")))
+;; (when (file-exists-p wen-personal-preload-dir)
+;;   (message "Loading personal configuration files in %s..." wen-personal-preload-dir)
+;;   (mapc 'load (directory-files wen-personal-preload-dir 't "^[^#].*el$")))
 
 (message "Loading Wen's core...")
 
 ;; the core stuff
 (require 'wen-packages)
-(require 'wen-custom)  ;; Needs to be loaded before core, editor and ui
-(require 'wen-shell-env)
 (require 'wen-ui)
-(require 'wen-core)
-(require 'wen-mode)
+(require 'wen-basic)
+(require 'wen-misc)
+(require 'wen-term) ;; must load after 'wen-misc'
+(require 'wen-company)
+(require 'wen-helm)
 (require 'wen-editor)
-(require 'wen-global-keybindings)
-(require 'wen-pyim)
 (require 'wen-window)
-
-;; OSX specific settings
-(when (eq system-type 'darwin)
-  (require 'wen-osx))
+(require 'wen-git)
+(require 'wen-files)
+(require 'wen-pinyin)
+(require 'wen-tip)
 
 (message "Loading Wen's modules...")
 
 ;; the modules
-(if (file-exists-p wen-modules-file)
-    (load wen-modules-file)
-  (message "Missing modules file %s" wen-modules-file)
-  (message "You can get started by copying the bundled example file"))
+ (if (file-exists-p wen-modules-file)
+     (load wen-modules-file)
+   (message "Missing modules file %s" wen-modules-file)
+   (message "You can get started by copying the bundled example file"))
 
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" wen-personal-dir))
@@ -92,5 +94,21 @@
 (wen-eval-after-init
  ;; greet the use with some useful tip
  (run-at-time 5 nil 'wen-tip-of-the-day))
+
+;; server mode
+(server-start)
+
+;;; set variables
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(display-time-24hr-format t)
+ '(display-time-day-and-date t)
+ '(display-time-format "%m月%d日%A%H:%M")
+ '(display-time-interval 10)
+ '(display-time-mode 1)
+ )
 
 ;;; init.el ends here

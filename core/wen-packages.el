@@ -1,13 +1,15 @@
 ;;; wen-packages.el --- Emacs default package selection.
 ;;; Code copy from Prelude.
 
-(require 'cl')
+(require 'cl)
 (require 'package)
 
 ;; melpa
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 ;; orgmode
+(add-to-list 'package-archives
+             '("org" . "http://orgmode.org/elpa/"))
 
 ;; set package-user-dir to be relative to install path
 (setq package-user-dir (expand-file-name "elpa" wen-dir))
@@ -15,28 +17,45 @@
 
 ;; a list of packages to ensure are installed at launch.
 (defvar wen-packages
-  '(ace-window
-     avy "relace ace-jump-mode"
-     ace-jump-buffer "depend ace?"
-     switch-window
-     browse-kill-ring
-     dash
-     diff-hl
-     easy-kill
-     expand-region
-     multiple-cursors
-     flycheck
-     gist
-     magit
-     git-timemachine
-     gitconfig-mode
-     gitignore-mode
-     projectile
-     move-text
-     smartparens
-     undo-tree
-     exec-path-from-shell
-     whole-line-or-region))
+  '(helm
+    helm-firefox
+    helm-ls-git
+    avy
+    multiple-cursors
+    ;; browse-kill-ring ;; see 'popup-kill-ring'
+    easy-kill
+    whole-line-or-region
+    expand-region
+    autopair
+    rainbow-delimiters
+    anzu
+    indent-guide
+    ace-window
+    gist
+    magit
+    git-gutter-fringe
+    git-timemachine
+    gitconfig-mode
+    gitignore-mode
+    json-mode
+    json-reformat
+    markdown-mode
+    syslog-mode
+    exec-path-from-shell
+    multi-term
+    dash
+    undo-tree
+    diff-hl
+    beacon
+    flycheck
+    projectile
+    company
+    popup
+    pos-tip
+    popup-kill-ring
+    yasnippet
+    chinese-pyim
+    zenburn-theme))
 
 ;; Check if all packages in 'wen-packages' are installed
 (defun wen-packages-installed-p ()
@@ -54,15 +73,14 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(define-obsolete-function-alias 'wen-ensure-module-deps 
-				'wen-require-packages)
+(define-obsolete-function-alias 'wen-ensure-module-deps 'wen-require-packages)
 
 ;; Install all packages listed in 'wen-packages'.
 (defun wen-install-packages ()
   ;; check for new packages (package versions)
   (unless (wen-packages-installed-p)
     (message "%s" "Emacs is now refreshing its package database...")
-    (wen-refresh-contents)
+    (package-refresh-contents)
     (message "%s" " done.")
     ;; install the missing packages
     (wen-require-packages wen-packages)))
@@ -71,25 +89,25 @@
 (wen-install-packages)
 
 ;; Browse third-party packages not bundled with Wen.
-;; Behaves similarly to `package-list-packages', 
+;; Behaves similarly to `package-list-packages',
 ;; but shows only the packages that
-;; are installed and are not in `prelude-packages'.  
+;; are installed and are not in `prelude-packages'.
 ;; Useful for removing unwanted packages.
 (defun wen-list-foreign-packages ()
   (interactive)
   (package-show-package-list
-    (set-difference package-activated-list wen-packages)))
+   (set-difference package-activated-list wen-packages)))
 
 
 ;; When file with EXTENSION is opened triggers auto-install of PACKAGE.
 ;; PACKAGE is installed only if not already present.
 ;; The file is opened in MODE.
 (defmacro wen-auto-install (extension package mode)
-  `(add-to-list 'auto-mode-list
-		`(,extension . (lambda ()
-				 (unless (package-installed-p ',package)
-				   (package-install ',package))
-				 (,mode)))))
+  `(add-to-list 'auto-mode-alist
+                `(,extension . (lambda ()
+                                 (unless (package-installed-p ',package)
+                                   (package-install ',package))
+                                 (,mode)))))
 
 (defvar wen-auto-install-alist
   '(("\\.clj\\'" clojure-mode clojure-mode)
@@ -136,16 +154,10 @@
     ("\\.thrift\\'" thrift thrift-mode)
     ("\\.yml\\'" yaml-mode yaml-mode)
     ("\\.yaml\\'" yaml-mode yaml-mode)
+    ("\\.log\\'" syslog-mode syslog-mode)
+    ("\\.error\\'" syslog-mode syslog-mode)
+    ("\\syslog\\'" syslog-mode syslog-mode)
     ("Dockerfile\\'" dockerfile-mode dockerfile-mode)))
-
-;; markdown-mode doesn't have autoloads for the auto-mode-alist
-;; so we add them manually if it's already installed
-(when (package-installed-p 'markdown-mode)
-  (add-to-list 'auto-mode-alist '("\\.markdown\\'" . gfm-mode))
-  (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
-
-(when (package-installed-p 'pkgbuild-mode)
-  (add-to-list 'auto-mode-alist '("PKGBUILD\\'" . pkgbuild-mode)))
 
 ;; build auto-install mappings
 (mapc
@@ -156,5 +168,32 @@
      (unless (package-installed-p package)
        (wen-auto-install extension package mode))))
  wen-auto-install-alist)
+
+(require 'epl)
+
+(defun wen-update ()
+  "Update Wen to its latest version."
+  (interactive)
+  (when (y-or-n-p "Do you want to update Wen? ")
+    (message "Updating installed packages...")
+    (epl-upgrade)
+    (message "Updating Wen...")
+    (cd wen-dir)
+    (shell-command "git pull")
+    (wen-recompile-init)
+    (message "Update finished. Restart Emacs to complete the process.")))
+
+(defun wen-update-packages (&optional arg)
+  "Update Wen's packages.
+This includes package installed via `wen-require-package'.
+
+With a prefix ARG updates all installed packages."
+  (interactive "P")
+  (when (y-or-n-p "Do you want to update Wen's packages? ")
+    (if arg
+        (epl-upgrade)
+      (epl-upgrade (-filter (lambda (p) (memq (epl-package-name p) wen-packages))
+                            (epl-installed-packages))))
+    (message "Update finished. Restart Emacs to complete the process.")))
 
 (provide 'wen-packages)
