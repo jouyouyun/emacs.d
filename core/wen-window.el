@@ -10,7 +10,7 @@
 (global-set-key (kbd "M-p") 'ace-window)
 ;; aw-keys default 0-9
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-;; aw-scope default 'global' show all windows, 
+;; aw-scope default 'global' show all windows,
 ;; if set to 'frame' show windows only in current frame.
 (setq aw-background nil)
 (setq aw-dispatch-always t)
@@ -22,7 +22,10 @@
     (?v aw-split-window-vert " Ace - Split Vert Window")
     (?b aw-split-window-horz " Ace - Split Horz Window")
     (?i delete-other-windows " Ace - Maximize Window")
-    (?o delete-other-windows " Ace - Maximize current window"))
+    (?o delete-other-windows " Ace - delete all other windows"))
 )
+
+;; buffer
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
 (provide 'wen-window)

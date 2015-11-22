@@ -1,6 +1,6 @@
 ;;; 'wen-pinyin.el' --- Emacs Chinese pinyin input selection.
 ;;; Using 'chinese-pyim' as default input.
-;;; Depends: 
+;;; Depends:
 (require 'chinese-pyim)
 
 (defun wen-pyim-dicts()
@@ -30,7 +30,7 @@
 (wen-pyim-dicts)
 (setq default-input-method "chinese-pyim")
 ;; default key 'C-\'
-(global-set-key (kbd "C-<SPC>") 'toggle-input-method)
+;; (global-set-key (kbd "C-\\") 'toggle-input-method)
 ;; 切换全角标点与半角标点
 (global-set-key (kbd "C-;") 'pyim-toggle-full-width-punctuation)
 ;; 设置光标跟随

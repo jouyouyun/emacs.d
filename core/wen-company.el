@@ -27,7 +27,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 ;; company-dabbrev
 ;; (setq company-dabbrev-code-everywhere t)
-(global-set-key (kbd "M-/") 'company-dabbrev)
+;; (global-set-key (kbd "M-/") 'company-dabbrev)
 ;; Customsize company backends
 (setq-local company-backends '((
                                 company-capf
@@ -71,7 +71,7 @@
 ;; get all completions from company backends
 (require 'company-try-hard)
 (global-set-key (kbd "C-x C-z") #'company-try-hard)
-(define-key company-active-map (kbd "C-z") #'company-try-hard)
+;; (define-key company-active-map (kbd "C-z") #'company-try-hard)
 
 ;; company-quickhelp
 (company-quickhelp-mode 1)

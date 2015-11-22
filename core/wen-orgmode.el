@@ -17,6 +17,54 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
 
+;; 默认不折叠
+(setq org-startup-folded 'showeverything)
+
+;; set supported language
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (C . t)
+   (sqlite . t)
+   (perl . t)
+   (ruby . t)
+   (dot . t)
+   ))
+
+;; 插入代码
+(defun org-insert-src-block (src-code-type)
+  "Insert a `SRC-CODE-TYPE' type source code block in org-mode."
+  (interactive
+   (let ((src-code-types
+          '("emacs-lisp" "python" "c" "go" "sh" "java" "js" "clojure" "c++"
+            "calc" "asymptote" "dot" "gnuplot" "ledger" "lilypond" "mscgen"
+            "octave" "oz" "plantuml" "R" "sass" "screen" "sql" "awk" "ditaa"
+            "haskell" "latex" "lisp" "matlab" "ocaml" "org" "perl" "ruby"
+            "scheme" "sqlite" "css")))
+     (list (completing-read "Source code type: " src-code-types))))
+  (progn
+    (newline-and-indent)
+    (insert (format "#+BEGIN_SRC %s\n" src-code-type))
+    (newline-and-indent)
+    (insert "#+END_SRC\n")
+    (previous-line 2)
+    (org-edit-src-code)))
+
+;; 导出语法高亮的Source Code
+(setq org-src-fontify-natively t)
+
+
+;; Github Flavored Markdown exporter for Org Mode
+(wen-require-package 'ox-gfm)
+(require 'ox-gfm)
+
+
+;; Export Org to html5 slide
+(wen-require-package 'ox-html5slide)
+(require 'ox-html5slide)
+
 (setq org-capture-templates
       '(("t" "Task" entry (file+headline
                            (concat org-directory "/todos.org")
@@ -68,10 +116,10 @@
 
 (defvar zh-preamble "
 \\usepackage{xeCJK}
-\\setCJKmainfont[BoldFont=Adobe Heiti Std, ItalicFont=Adobe Kaiti Std]{Adobe Song Std}
-\\setCJKmonofont[Scale=0.9]{Adobe Song Std}
-\\setCJKfamilyfont{song}[BoldFont=Adobe Heiti Std]{Adobe Song Std}
-\\setCJKfamilyfont{sf}[BoldFont=Adobe Heiti Std]{Adobe Song Std}
+\\setCJKmainfont[BoldFont=Source Han Sans CN Bold, ItalicFont=Source Han Snas CN Normal]{Source Han Sans CN Regular}
+\\setCJKmonofont[Scale=0.9]{Source Code Pro Regular}
+\\setCJKfamilyfont{song}[BoldFont=Source Han Sans CN Bold]{Source Han Sans CN Regular}
+\\setCJKfamilyfont{sf}[BoldFont=Source Han Sans CN Bold]{Source Han Sans CN Regular}
 \\renewcommand{\\contentsname}{目录}
 \\renewcommand{\\listfigurename}{插图目录}
 \\renewcommand{\\listtablename}{表格目录}

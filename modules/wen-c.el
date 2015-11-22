@@ -40,8 +40,8 @@
 (require 'flycheck-ycmd)
 (flycheck-ycmd-setup)
 ;; TODO: compile ycmd
-(set-variable 'ycmd-server-command '("python" "~/.vim/plugged/YouCompleteMe/third_party/ycmd/ycmd"))
-(set-variable 'ycmd-global-config "~/.vim/datas/ycm_extra_conf.py")
+(set-variable 'ycmd-server-command '("python" "/Data/Projects/Private/ycmd"))
+(set-variable 'ycmd-global-config "~/.ycm_extra_conf.py")
 
 ;; company-c-header
 ;; TODO: set 'company-c-headers-path-system'

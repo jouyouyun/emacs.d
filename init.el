@@ -3,6 +3,9 @@
 (when (version< emacs-version "24.1")
   (error "Wen requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
 
+;; enable debug
+(setq debug-on-error t)
+
 ;; FIXME: Reset `tramp-ssh-controlmaster-options' to fix startup slow
 ;; issue since 24.5.
 (setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
@@ -69,6 +72,7 @@
 (require 'wen-helm)
 (require 'wen-editor)
 (require 'wen-window)
+(require 'wen-orgmode)
 (require 'wen-git)
 (require 'wen-files)
 (require 'wen-pinyin)

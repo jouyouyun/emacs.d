@@ -4,16 +4,19 @@ b-d 标点
 b-f 播放
 b-n 不能
 b-s 不是
+b-y 编译
 bei 被
+bian-yi 编译
 biao-dian 标点
 bo-fang 播放
 bu-neng 不能
 bu-shi 不是
 c 此 重
+c-c 出错
 c-j-k 此接口
 c-k 查看
 c-l 处理
-c-s 参数 测试
+c-s 测试 参数
 c-x 程序 出现 重现
 c-z 查找 重置
 can-shu 参数
@@ -24,11 +27,12 @@ cheng-xu 程序
 chong 重
 chong-xian 重现
 chong-zhi 重置
+chu-cuo 出错
 chu-li 处理
 chu-xian 出现
 ci 此
 ci-jie-kou 此接口
-d 的 到 顶 端 掉
+d 的 等 到 顶 端 掉
 d-c 导出
 d-k 打开
 d-m 代码
@@ -41,6 +45,7 @@ dai-ma 代码
 dao 到
 dao-chu 导出
 de 的
+deng 等
 di-yi-ci 第一次
 diao 掉
 diao-yong 调用
@@ -48,21 +53,24 @@ ding 顶
 duan 端
 f-b-l 分辨率
 f-f 方法
+f-s 方式
 f-x 发现
 fa-xian 发现
 fang-fa 方法
+fang-shi 方式
 fen-bian-lv 分辨率
 g 高
 g-b 光标
 g-g 更改
-g-j 根据
+g-j 关机 根据
 g-s 跟随
 gao 高
 gen-ju 根据
 gen-sui 跟随
 geng-gai 更改
+guan-ji 关机
 guang-biao 光标
-h 和 会 还 后
+h 慧 后 会 和 还
 h-b 合并
 h-d 后端
 h-n-y-q-z 和你一齐奏
@@ -73,7 +81,7 @@ he-ni-yi-qi-zou 和你一齐奏
 hou 后
 hou-duan 后端
 huan 还
-hui 会
+hui 慧 会
 huo 和
 huo-ni-yi-qi-zou 和你一齐奏
 j 将 交
@@ -97,10 +105,12 @@ jin-xing 进行
 k 会 宽
 k-b 空白
 k-g 宽高
+k-h 开会
 k-l 考虑
 k-s 开始
 k-y 可以
 k-z 控制
+kai-hui 开会
 kai-shi 开始
 kao-lv 考虑
 ke-yi 可以
@@ -109,15 +119,17 @@ kong-zhi 控制
 kuai 会
 kuan 宽
 kuan-gao 宽高
-l 了 来 乱
+l 来 了 乱
 l-b 列表
 l-d 乱掉
 l-j 连接 链接
+l-y 龙宇
 lai 来
 le 了
 lian-jie 连接 链接
 liao 了
 lie-biao 列表
+long-yu 龙宇
 luan 乱
 luan-diao 乱掉
 m 名 枚
@@ -131,10 +143,14 @@ n 你
 n-h 你好
 ni 你
 ni-hao 你好
+p 彭
+p-h 彭慧
 p-x 排序
 pai-xu 排序
+peng 彭
+peng-hui 彭慧
 q 其 前
-q-d 确定 前端
+q-d 去掉 确定 前端
 q-h 切换
 q-k 情况
 q-r 确认
@@ -148,6 +164,7 @@ qian 前
 qian-duan 前端
 qie-huan 切换
 qing-kuang 情况
+qu-diao 去掉
 que-ding 确定
 que-ren 确认
 r-h 然后 如何
@@ -158,26 +175,35 @@ s-b 失败
 s-f 是否
 s-p 是否
 s-x 熟悉 实现 属性 剩下
+s-y 使用 声音
 s-z 设置
 she-zhi 设置
 shei 谁
 sheng-xia 剩下
+sheng-yin 声音
 shi 时 是
 shi-bai 失败
 shi-fou 是否
 shi-pi 是否
 shi-xian 实现
+shi-yong 使用
 shu-xi 熟悉
 shu-xing 属性
 shui 谁
 t 他
+t-c 退出
 t-g 通过
 t-j 添加
+t-s 调试
 ta 他
 tian-jia 添加
+tiao-shi 调试
 tong-guo 通过
+tui-chu 退出
 w 为 未
+w-c 完成
 w-t 问题
+wan-cheng 完成
 wei 为 未
 wen-ti 问题
 x-g 修改 相关
@@ -186,36 +212,44 @@ xi-tong 系统
 xiang-guan 相关
 xiang-tong 相同
 xiu-gai 修改
-y 一 与 由
+y 与 抑 一 由
+y-j 语句
 y-l 用来
 y-r 移入
 y-w 因为
-y-x 一些 音效
-yi 一
+y-x 音效 一些
+y-z 抑制
+yi 抑 一
 yi-ru 移入
 yi-xie 一些
+yi-zhi 抑制
 yin-wei 因为
 yin-xiao 音效
 yong-lai 用来
 you 由
 yu 与
-z 最 在 中 置 重 只
+yu-ju 语句
+z 中 在 制 最 置 重 只
 z-d 自动 置顶
 z-g 这个
 z-h 最后 帐户
+z-s 阻塞
 z-x 中心
+z-y 只有
 z-y-w 中英文
 z-z 最终 重置
 zai 在
 zhang-hu 帐户
 zhe-ge 这个
-zhi 置 只
+zhi 制 置 只
 zhi-ding 置顶
+zhi-you 只有
 zhong 中 重
 zhong-xin 中心
 zhong-ying-wen 中英文
 zhong-zhi 重置
 zi-dong 自动
+zu-se 阻塞
 zui 最
 zui-hou 最后
 zui-zhong 最终

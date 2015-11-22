@@ -3,7 +3,6 @@
 ;;; Using 'multi-term' as default term.
 
 (require 'exec-path-from-shell)
-(require 'multi-term)
 
 (exec-path-from-shell-initialize)
 ;; Custom env
@@ -17,6 +16,7 @@
 	    "GOSRC"))
   (exec-path-from-shell-copy-env var))
 
+(require 'multi-term)
 ;; multi-term
 (global-set-key (kbd "C-c M-t") 'multi-term)
 (setq multi-term-program "/bin/zsh"

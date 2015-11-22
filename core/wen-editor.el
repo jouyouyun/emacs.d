@@ -8,7 +8,7 @@
 (setq avy-background t)
 (setq avy-style 'at-full)
 (setq avy-style 'at-full)
-(global-set-key (kbd "M-g b") 'avy-goto-char-in-line)
+(global-set-key (kbd "M-g w") 'avy-goto-char-in-line)
 (global-set-key (kbd "M-g f") 'avy-goto-char)
 (global-set-key (kbd "M-g g") 'avy-goto-line)
 (global-set-key (kbd "M-g C-y") 'avy-copy-line)
@@ -21,15 +21,15 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c C-s") 'mc/skip-to-next-like-this)
 
 ;; expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-;; kill ring
-(require 'browse-kill-ring)
-;; default: <M-y>
-(browse-kill-ring-default-keybindings)
+;; popup-kill-ring
+(require 'popup-kill-ring)
+(global-set-key (kbd "M-y") 'popup-kill-ring)
 
 ;; easy-kill
 (require 'easy-kill)
@@ -64,10 +64,6 @@
 ;;
 ;; easy mark
 (global-set-key [remap mark-sexp] 'easy-mark)
-
-;; browser-kill-ring
-(require 'popup-kill-ring)
-(global-set-key (kbd "M-y") 'popup-kill-ring)
 
 ;; Insert an empty line after the current line.
 (defun wen-open-line(arg)

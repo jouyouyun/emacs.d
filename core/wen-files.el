@@ -9,6 +9,13 @@
 (when (package-installed-p 'pkgbuild-mode)
   (add-to-list 'auto-mode-alist '("PKGBUILD\\'" . pkgbuild-mode)))
 
+(require 'syslog-mode)
+(add-to-list 'auto-mode-alist '("\\.log\\'" . syslog-mode))
+(add-to-list 'auto-mode-alist '("\\.err\\'" . syslog-mode))
+(add-to-list 'auto-mode-alist '("\\.error\\'" . syslog-mode))
+(add-to-list 'auto-mode-alist '("\\syslog\\'" . syslog-mode))
+(add-to-list 'auto-mode-alist '("\\error\\'" . syslog-mode))
+
 (require 'nxml-mode)
 
 (push '("<\\?xml" . nxml-mode) magic-mode-alist)
