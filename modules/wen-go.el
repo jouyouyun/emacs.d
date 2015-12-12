@@ -37,8 +37,6 @@
   (local-set-key (kbd "C-c C-g") 'go-goto-imports)
   (local-set-key (kbd "C-c C-")
                  'go-direx-pop-to-buffer)
-  ;; gofmt on save
-  (add-hook 'before-save-hook 'gofmt-before-save nil t)
   ;; gotest
   ;; (wen-go-test-setup)
   )
@@ -47,6 +45,8 @@
   `(progn
      (wen-go-setup)
      (add-hook 'go-mode-hook 'go-eldoc-setup)
+     ;; gofmt on save
+     (add-hook 'before-save-hook 'gofmt-before-save)
      ))
 
 ;; company-go

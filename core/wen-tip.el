@@ -48,7 +48,7 @@
     "Press <C-x c o> to search input key by helm-occur."
     "Press <M-?> to search input key by helm-ag."
     "Press <C-\> to toggle default input method."
-    "Press <C-;> to toggle pinyin full or width punctuation."
+    "Press <C-M-;> to toggle pinyin full or width punctuation."
     "Press <C-c M-t> to open multi term."
     "Press <C-c M-e> to send ESC in multi term."
     "Press <C-c M-[> to jump previous multi term."
@@ -66,6 +66,7 @@
     "Press <C-c c> to open org capture."
     "Press <C-c b> to switch org buffer."
     "Press <C-c s g> to search in Google."
+    "Press <M-\\> to call sdcv."
     "Access the official Emacs manual by pressing <C-h r>."
     "Visit the EmacsWiki at http://emacswiki.org to find out even more about Emacs."))
 

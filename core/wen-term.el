@@ -12,7 +12,8 @@
 	    "PRJ"
 	    "SYNC"
 	    "CONFIG"
-	    "GOPKG"
+            "GOPATH"
+            "GOPKG"
 	    "GOSRC"))
   (exec-path-from-shell-copy-env var))
 

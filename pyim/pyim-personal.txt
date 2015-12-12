@@ -1,255 +1,696 @@
 ;; -*- coding: utf-8 -*-
-b 被
-b-d 标点
+a 按
+a-j 按键
+a-z 安装 按照
+a-z-z 按这种
+a-z-z-q 安装之前
+an 按
+an-jian 按键
+an-zhao 按照
+an-zhe-zhong 按这种
+an-zhuang 安装
+an-zhuang-zhi-qian 安装之前
+b 把 不 被 并
+b-b-s 并不是
+b-c-g 不成功
+b-d 不到 不断 标点
 b-f 播放
+b-g 不过
+b-h 不会
+b-j 背景
+b-j-s 不及时
+b-l 变量
+b-m-d-k 白名单库
 b-n 不能
 b-s 不是
-b-y 编译
+b-t 不同
+b-x-g 不修改
+b-y 边缘 编译
+b-y-z 不一致
+b-z 不再 壁纸
+b-z-c 不支持
+b-z-y 不足以
+ba 把
+bai-ming-dan-ku 白名单库
 bei 被
+bei-jing 背景
+bi-zhi 壁纸
+bian-liang 变量
 bian-yi 编译
+bian-yuan 边缘
 biao-dian 标点
+bing 并
+bing-bu-shi 并不是
 bo-fang 播放
+bu 不
+bu-cheng-gong 不成功
+bu-dao 不到
+bu-duan 不断
+bu-guo 不过
+bu-hui 不会
+bu-ji-shi 不及时
 bu-neng 不能
 bu-shi 不是
-c 此 重
-c-c 出错
+bu-tong 不同
+bu-xiu-gai 不修改
+bu-yi-zhi 不一致
+bu-zai 不再
+bu-zhi-chi 不支持
+bu-zu-yi 不足以
+c 从 催 此 重 窗 出 测
+c-c 出错 催促
+c-f 拆分
+c-g 窗管
+c-h 才会
 c-j-k 此接口
 c-k 查看
 c-l 处理
-c-s 测试 参数
-c-x 程序 出现 重现
-c-z 查找 重置
+c-m-b 触摸板
+c-m-k 此模块
+c-q 重启
+c-s 测试 尝试 参数 测锁
+c-w 错误
+c-w-t 此问题
+c-x 程序 重现 出现 重写 宠携
+c-z 操作 查找 重置
+cai-hui 才会
 can-shu 参数
+cao-zuo 操作
+ce 测
 ce-shi 测试
+ce-suo 测锁
 cha-kan 查看
 cha-zhao 查找
+chai-fen 拆分
+chang-shi 尝试
 cheng-xu 程序
 chong 重
+chong-qi 重启
 chong-xian 重现
+chong-xie 重写 宠携
 chong-zhi 重置
+chu 出
 chu-cuo 出错
 chu-li 处理
+chu-mo-ban 触摸板
 chu-xian 出现
+chuang 窗
+chuang-guan 窗管
 ci 此
 ci-jie-kou 此接口
-d 的 等 到 顶 端 掉
-d-c 导出
+ci-mo-kuai 此模块
+ci-wen-ti 此问题
+cong 从
+cui 催
+cui-cu 催促
+cuo-wu 错误
+d 的 到 道 对 但 掉 等 待 都 段 顶 端
+d-b-z 但不知
+d-c 导出 但重
+d-d 等待 单独 达到
+d-d-l 低电量
+d-h 的话 都会
+d-j 待机 代及
 d-k 打开
+d-l 登录
 d-m 代码
-d-x 大小
-d-y 调用
+d-q 当前
+d-x 对象 大小 东西
+d-y 调用 打印 对应 定义
 d-y-c 第一次
+d-y-h 多用户
+d-z 导致 动作 但重
+d-z-d 导致的
+da-dao 达到
 da-kai 打开
 da-xiao 大小
+da-yin 打印
+dai 待
+dai-ji 待机 代及
 dai-ma 代码
-dao 到
+dan 但
+dan-bu-zhi 但不知
+dan-chong 但重
+dan-du 单独
+dan-zhong 但重
+dang-qian 当前
+dao 到 道
 dao-chu 导出
+dao-zhi 导致
+dao-zhi-de 导致的
 de 的
+de-hua 的话
 deng 等
+deng-dai 等待
+deng-lu 登录
+di-dian-liang 低电量
 di-yi-ci 第一次
 diao 掉
 diao-yong 调用
 ding 顶
-duan 端
+ding-yi 定义
+dong-xi 东西
+dong-zuo 动作
+dou 都
+du 都
+du-hui 都会
+duan 段 端
+dui 对
+dui-xiang 对象
+dui-ying 对应
+duo-yong-hu 多用户
+e 而
+er 而
+f 反
 f-b-l 分辨率
-f-f 方法
-f-s 方式
+f-f 反复 方法
+f-l 反了
+f-m 方面
+f-q 分区
+f-s 发送 发声 方式
 f-x 发现
+f-z 复制
+fa-sheng 发声
+fa-song 发送
 fa-xian 发现
+fan 反
+fan-fu 反复
+fan-le 反了
+fan-liao 反了
 fang-fa 方法
+fang-mian 方面
 fang-shi 方式
 fen-bian-lv 分辨率
-g 高
-g-b 光标
+fen-qu 分区
+fu-zhi 复制
+g 改 管 过 挂 高
+g-b 改变 光标 关闭
+g-d 挂掉 刮掉
 g-g 更改
 g-j 关机 根据
+g-l 管理 改了
+g-l-y 管理员
 g-s 跟随
+g-s-h 格式化
+g-x 关系
+g-y 改用
+gai 改
+gai-bian 改变
+gai-le 改了
+gai-liao 改了
+gai-yong 改用
 gao 高
+ge-shi-hua 格式化
 gen-ju 根据
 gen-sui 跟随
 geng-gai 更改
+gua 挂
+gua-diao 挂掉 刮掉
+guan 管
+guan-bi 关闭
 guan-ji 关机
+guan-li 管理
+guan-li-yuan 管理员
+guan-xi 关系
 guang-biao 光标
-h 慧 后 会 和 还
+guo 过
+h 会 后 还 和 耗 很 好 慧
 h-b 合并
-h-d 后端
+h-d 好的 后端
+h-j 耗尽 环境
+h-k 很快
+h-k-y 还可以
+h-l 忽略
 h-n-y-q-z 和你一齐奏
+h-q 获取
+h-s 还是
+h-w 耗完 还未
+h-z 汉字
 hai 还
+hai-ke-yi 还可以
+hai-shi 还是
+hai-wei 还未
+han-zi 汉字
+hao 耗 好
+hao-de 好的
+hao-jin 耗尽
+hao-wan 耗完
 he 和
 he-bing 合并
 he-ni-yi-qi-zou 和你一齐奏
+hen 很
+hen-kuai 很快
 hou 后
 hou-duan 后端
+hu-lue 忽略
 huan 还
-hui 慧 会
+huan-jing 环境
+huan-shi 还是
+huan-wei 还未
+hui 会 慧
 huo 和
 huo-ni-yi-qi-zou 和你一齐奏
-j 将 交
-j-c 检查
-j-h 进行
+huo-qu 获取
+j 监 静 就 将 经 交
+j-c 检查 进程
+j-g 经过
+j-h 就会 酒会 计划 进行
+j-h-l 就好了
 j-k 接口
+j-m 界面
 j-r 进入
-j-s 计算
+j-s 结束 加上 及时 计算
+j-t 具体 监听
 j-x 继续 进行
+j-y 禁用 静音
 j-z 接着
+ji-hua 计划
+ji-shi 及时
 ji-suan 计算
 ji-xu 继续
+jia-shang 加上
+jian 监
 jian-cha 检查
+jian-ting 监听
 jiang 将
 jiao 交
 jie-kou 接口
+jie-mian 界面
+jie-shu 结束
 jie-zhe 接着
+jin-cheng 进程
 jin-hang 进行
 jin-ru 进入
 jin-xing 进行
-k 会 宽
+jin-yong 禁用
+jing 静 经
+jing-guo 经过
+jing-yin 静音
+jiu 就
+jiu-hao-le 就好了
+jiu-hui 就会 酒会
+ju-ti 具体
+k 会 空 可 宽
 k-b 空白
-k-g 宽高
+k-g 开关 宽高
 k-h 开会
+k-j-j 快捷键
 k-l 考虑
-k-s 开始
+k-n 可能
+k-s 卡死 开始 快速
+k-x 可行
 k-y 可以
 k-z 控制
+ka-si 卡死
+kai-guan 开关
 kai-hui 开会
 kai-shi 开始
 kao-lv 考虑
+ke 可
+ke-neng 可能
+ke-xing 可行
 ke-yi 可以
+kong 空
 kong-bai 空白
 kong-zhi 控制
 kuai 会
+kuai-jie-jian 快捷键
+kuai-su 快速
 kuan 宽
 kuan-gao 宽高
-l 来 了 乱
+l 了 来 乱
 l-b 列表
 l-d 乱掉
-l-j 连接 链接
+l-j 立即 逻辑 连接 链接
+l-m 乱马
+l-x 类型
 l-y 龙宇
 lai 来
 le 了
+lei-xing 类型
+li-ji 立即
 lian-jie 连接 链接
 liao 了
 lie-biao 列表
 long-yu 龙宇
 luan 乱
 luan-diao 乱掉
-m 名 枚
+luan-ma 乱马
+luo-ji 逻辑
+m 慢 码 每 没 名 枚
+m-b 目标
+m-c 每次
+m-d 目的 每段
 m-k 模块
+m-l 目录
+m-r 默认
+m-t 明天
+m-w-t 没问题
 m-y 没有
-mei 枚
+m-z 满足
+ma 码
+man 慢
+man-zu 满足
+mei 每 没 枚
+mei-ci 每次
+mei-duan 每段
+mei-wen-ti 没问题
 mei-you 没有
 ming 名
+ming-tian 明天
 mo-kuai 模块
-n 你
+mo-ren 默认
+mu-biao 目标
+mu-de 目的
+mu-lu 目录
+n 那 你
+n-c 内存
+n-f-m 那方面
+n-g 能够 那个
 n-h 你好
+n-l 那里 哪里
+na 那
+na-fang-mian 那方面
+na-ge 那个
+na-li 那里 哪里
+nei-cun 内存
+neng-gou 能够
 ni 你
 ni-hao 你好
-p 彭
+p 屏 彭
+p-d 判断
 p-h 彭慧
 p-x 排序
+p-y 拼音
+p-z 配置
 pai-xu 排序
+pan-duan 判断
+pei-zhi 配置
 peng 彭
 peng-hui 彭慧
-q 其 前
-q-d 去掉 确定 前端
+pin-yin 拼音
+ping 屏
+q 请 启 去 区 其 前
+q-c 清楚
+q-d 前端 启动 去掉 确定
 q-h 切换
 q-k 情况
 q-r 确认
+q-s 缺少
 q-t 其它
+q-y-g 前一个
 q-z 齐奏 其中
-qi 其
+qi 启 其
+qi-dong 启动
 qi-ta 其它
 qi-zhong 其中
 qi-zou 齐奏
 qian 前
 qian-duan 前端
+qian-yi-ge 前一个
 qie-huan 切换
+qing 请
+qing-chu 清楚
 qing-kuang 情况
+qu 去 区
 qu-diao 去掉
 que-ding 确定
 que-ren 确认
+que-shao 缺少
+r 让 热
+r-g 如果
 r-h 然后 如何
+r-q 热区
+r-z 日志
 ran-hou 然后
+rang 让
+re 热
+re-qu 热区
+ri-zhi 日志
+ru-guo 如果
 ru-he 如何
-s 时 是 谁
-s-b 失败
-s-f 是否
-s-p 是否
-s-x 熟悉 实现 属性 剩下
-s-y 使用 声音
+s 时 是 死 删 试 锁 谁
+s-b 顺便 失败
+s-b-d-a 收不到啊
+s-c 上层
+s-d 锁定 删掉
+s-f 释放 是否
+s-j 事件 时间 数据
+s-k 声卡
+s-p 是否 锁屏
+s-s 试试
+s-w 神威
+s-x 实现 熟悉 属性 剩下
+s-y 声音 使用 剩余
 s-z 设置
+shan 删
+shan-diao 删掉
+shang-ceng 上层
 she-zhi 设置
 shei 谁
+shen-wei 神威
+sheng-ka 声卡
 sheng-xia 剩下
 sheng-yin 声音
-shi 时 是
+sheng-yu 剩余
+shi 时 是 试
 shi-bai 失败
+shi-fang 释放
 shi-fou 是否
+shi-jian 事件 时间
 shi-pi 是否
+shi-shi 试试
 shi-xian 实现
 shi-yong 使用
+shou-bu-dao-a 收不到啊
+shu-ju 数据
 shu-xi 熟悉
 shu-xing 属性
 shui 谁
-t 他
+shun-bian 顺便
+si 死
+suo 锁
+suo-ding 锁定
+suo-ping 锁屏
+t 听 太 它 塔 头 他
 t-c 退出
+t-d 太多 特定
 t-g 通过
 t-j 添加
-t-s 调试
-ta 他
+t-m-l 太慢了
+t-p 图片
+t-s 调试 同时 特殊
+t-x 同学 头像
+ta 它 塔 他
+tai 太
+tai-duo 太多
+tai-man-le 太慢了
+tai-man-liao 太慢了
+te-ding 特定
+te-shu 特殊
 tian-jia 添加
 tiao-shi 调试
+ting 听
 tong-guo 通过
+tong-shi 同时
+tong-xue 同学
+tou 头
+tou-xiang 头像
+tu-pian 图片
 tui-chu 退出
-w 为 未
+w 为 未 完
 w-c 完成
+w-d 稳定
+w-f 无法
+w-j 文件
+w-k 为空 惟恐
+w-m 我们
+w-s-m 为什么
 w-t 问题
+w-x 无效
+wan 完
 wan-cheng 完成
 wei 为 未
+wei-kong 为空 惟恐
+wei-shen-me 为什么
+wen-ding 稳定
+wen-jian 文件
 wen-ti 问题
-x-g 修改 相关
+wo-men 我们
+wu-fa 无法
+wu-xiao 无效
+x 写 下 先 现 新 像 选
+x-f 修复
+x-g 相关 修改 效果
+x-h 循环 消耗 信号
+x-m 项目
+x-q 需求
+x-r 先让
+x-s 显示 写死
+x-s-q 显示器
 x-t 系统 相同
+x-x 信息
+x-y 需要
+x-y-g 写一个
+x-z 协助 选着 现在 选中
+x-z-b 新装备
+x-z-x-t 新装系统
 xi-tong 系统
+xia 下
+xian 先 现
+xian-rang 先让
+xian-shi 显示
+xian-shi-qi 显示器
+xian-zai 现在
+xiang 像
 xiang-guan 相关
+xiang-mu 项目
 xiang-tong 相同
+xiao-guo 效果
+xiao-hao 消耗
+xie 写
+xie-si 写死
+xie-yi-ge 写一个
+xie-zhu 协助
+xin 新
+xin-hao 信号
+xin-xi 信息
+xin-zhuang-bei 新装备
+xin-zhuang-xi-tong 新装系统
+xiu-fu 修复
 xiu-gai 修改
-y 与 抑 一 由
-y-j 语句
-y-l 用来
+xu-qiu 需求
+xu-yao 需要
+xuan 选
+xuan-zhe 选着
+xuan-zhong 选中
+xun-huan 循环
+y 有 音 与 一 延 又 抑 由
+y-b 一般
+y-d 一定 应对
+y-g 一个 应该
+y-h 用户 优化
+y-j 研究 语句
+y-l 用来 音量
+y-p 音频
+y-q 以前
 y-r 移入
+y-s 要是 于是 延时
 y-w 因为
-y-x 音效 一些
-y-z 抑制
-yi 抑 一
+y-w-c 一完成
+y-x 音效 有效 一些
+y-y 语言 原因 由于
+y-z 验证 一直 一致 抑制
+yan 延
+yan-jiu 研究
+yan-shi 延时
+yan-zheng 验证
+yao-shi 要是
+yi 一 抑
+yi-ban 一般
+yi-ding 一定
+yi-ge 一个
+yi-qian 以前
 yi-ru 移入
+yi-wan-cheng 一完成
 yi-xie 一些
-yi-zhi 抑制
+yi-zhi 一直 一致 抑制
+yin 音
+yin-liang 音量
+yin-pin 音频
 yin-wei 因为
 yin-xiao 音效
+ying-dui 应对
+ying-gai 应该
+yong-hu 用户
 yong-lai 用来
-you 由
+you 有 又 由
+you-hua 优化
+you-xiao 有效
+you-yu 由于
 yu 与
 yu-ju 语句
-z 中 在 制 最 置 重 只
-z-d 自动 置顶
+yu-shi 于是
+yu-yan 语言
+yuan-yin 原因
+z 中 值 组 只 在 重 暂 装 做 则 再 找 转 咱 制 最 置
+z-b 正被 逐步 准备
+z-b-g 只不过
+z-b-q-c 暂不清楚
+z-c 正常 支持 找出
+z-d 自动 找到 字典 字段 置顶 只对 做到
+z-d-d-l 自动登录
+z-d-y 自定义
 z-g 这个
-z-h 最后 帐户
-z-s 阻塞
-z-x 中心
-z-y 只有
+z-h 执行 最后 帐户 之后
+z-j 自己 直接
+z-l 整理
+z-m 桌面 怎么
+z-q 之前
+z-s 这时 阻塞
+z-t 主题 状态 字体 昨天
+z-w 作为
+z-x 执行 最新 中心 注销
+z-y 注意 足以 这样 占用 只有
 z-y-w 中英文
-z-z 最终 重置
-zai 在
+z-z 阻止 重置 最终 这种
+zai 在 再
+zan 暂 咱
+zan-bu-qing-chu 暂不清楚
+ze 则
+zen-me 怎么
+zhan-yong 占用
 zhang-hu 帐户
+zhao 找
+zhao-chu 找出
+zhao-dao 找到
 zhe-ge 这个
-zhi 制 置 只
+zhe-shi 这时
+zhe-yang 这样
+zhe-zhong 这种
+zheng-bei 正被
+zheng-chang 正常
+zheng-li 整理
+zhi 值 只 制 置
+zhi-bu-guo 只不过
+zhi-chi 支持
 zhi-ding 置顶
+zhi-dui 只对
+zhi-hang 执行
+zhi-hou 之后
+zhi-jie 直接
+zhi-qian 之前
+zhi-xing 执行
 zhi-you 只有
 zhong 中 重
 zhong-xin 中心
 zhong-ying-wen 中英文
 zhong-zhi 重置
+zhu-bu 逐步
+zhu-ti 主题
+zhu-xiao 注销
+zhu-yi 注意
+zhuan 转
+zhuang 装
+zhuang-tai 状态
+zhun-bei 准备
+zhuo-mian 桌面
+zi-dian 字典
+zi-ding-yi 自定义
 zi-dong 自动
+zi-dong-deng-lu 自动登录
+zi-duan 字段
+zi-ji 自己
+zi-ti 字体
+zu 组
 zu-se 阻塞
+zu-yi 足以
+zu-zhi 阻止
 zui 最
 zui-hou 最后
+zui-xin 最新
 zui-zhong 最终
+zuo 做
+zuo-dao 做到
+zuo-tian 昨天
+zuo-wei 作为

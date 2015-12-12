@@ -1,6 +1,9 @@
 ;;; 'wen-files.el' --- Emacs files mode selection.
 ;;; Files like: json, xml, markdown, ini, log, PKGBUILD
 
+;; View Large Files
+(require 'vlf-setup)
+
 ;; markdown-mode doesn't have autoloads for the auto-mode-alist
 ;; so we add them manually if it's already installed
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . gfm-mode))

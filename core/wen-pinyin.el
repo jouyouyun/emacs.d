@@ -25,14 +25,14 @@
 ;; 搜狗细胞词库转换为 pyim 词库
 ;; (setq pyim-dicts-manager-scel2pyim-command "~/.emacs.d/bin/scel2pyim")
 ;; 词语联想功能
-(setq pyim-enable-words-predict '(pinyin-similar pinyin-shouzimu guess-words))
+;; (setq pyim-enable-words-predict '(pinyin-similar pinyin-shouzimu guess-words))
 ;; (setq pyim-enable-words-predict nil)
 (wen-pyim-dicts)
 (setq default-input-method "chinese-pyim")
 ;; default key 'C-\'
 ;; (global-set-key (kbd "C-\\") 'toggle-input-method)
 ;; 切换全角标点与半角标点
-(global-set-key (kbd "C-;") 'pyim-toggle-full-width-punctuation)
+(global-set-key (kbd "C-M-;") 'pyim-toggle-full-width-punctuation)
 ;; 设置光标跟随
 ;; (setq pyim-use-tooltip t)
 

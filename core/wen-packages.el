@@ -37,6 +37,7 @@
     git-timemachine
     gitconfig-mode
     gitignore-mode
+    vlf
     json-mode
     json-reformat
     markdown-mode
@@ -55,6 +56,7 @@
     popup-kill-ring
     yasnippet
     chinese-pyim
+    youdao-dictionary
     zenburn-theme))
 
 ;; Check if all packages in 'wen-packages' are installed
@@ -195,5 +197,10 @@ With a prefix ARG updates all installed packages."
       (epl-upgrade (-filter (lambda (p) (memq (epl-package-name p) wen-packages))
                             (epl-installed-packages))))
     (message "Update finished. Restart Emacs to complete the process.")))
+
+(defun wen-recompile-init ()
+   "Byte-compile all your dotfiles again."
+   (interactive)
+   (byte-recompile-directory wen-dir 0))
 
 (provide 'wen-packages)
