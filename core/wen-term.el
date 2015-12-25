@@ -48,15 +48,13 @@
      (ad-activate 'term-send-input)
      ;; no limit buffer length
      (setq show-trailing-whitespace nil)
-     ;; paste
-     ;; (define-key term-raw-map (kbd "C-y") 'term-paste)
      ;; send 'ESC' to terminal
      (add-to-list 'term-bind-key-alist '("C-c M-e" . term-send-esc))
-     ;; jump terminals
-     (add-to-list 'term-bind-key-alist '("C-c M-[" . multi-term-prev))
-     (add-to-list 'term-bind-key-alist '("C-c M-]" . multi-term-next))
      (setq term-bind-key-alist
            (list (cons "C-c C-c" 'term-interrupt-subjob)
+                 ;; jump terminals
+                 (cons "C-c M-[" 'multi-term-prev)
+                 (cons "C-c M-]" 'multi-term-next)
                  (cons "C-p" 'previous-line)
                  (cons "C-n" 'next-line)
                  (cons "M-f" 'term-send-forward-word)
@@ -65,9 +63,10 @@
                  (cons "C-c C-k" 'term-char-mode)
                  (cons "M-DEL" 'term-send-backward-kill-word)
                  (cons "M-d" 'term-send-forward-kill-word)
-                 (cons "C-r" 'term-send-reverse-search-history)
-                 (cons "C-y" 'term-send-raw)))
-  ;; Disable yasnippet
-  (yas-minor-mode -1)))
+                 (cons "C-r" 'term-send-reverse-search-history)))
+     ;; paste
+     (define-key term-raw-map (kbd "C-y") 'term-paste)
+     ;; Disable yasnippet
+     (yas-minor-mode -1)))
 
 (provide 'wen-term)
