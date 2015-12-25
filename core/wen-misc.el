@@ -6,7 +6,7 @@
 (require 'youdao-dictionary)
 ;; Enable Cache
 (setq url-automatic-caching t)
-(global-set-key (kbd "M-\\") 'youdao-dictionary-search-at-point+)
+(global-set-key (kbd "C-c M-\\") 'youdao-dictionary-search-at-point+)
 
 ;; Yasnippet
 (eval-after-load 'popup

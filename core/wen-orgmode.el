@@ -51,7 +51,8 @@
 
 (defvar wen-org-dir "/Data/org")
 (setq org-directory wen-org-dir)
-(setq org-agenda-files `(,(concat wen-org-dir "/todos")
+(setq org-agenda-files `(,wen-org-dir
+                         ,(concat wen-org-dir "/todos")
                          ,(concat wen-org-dir "/todos/work")
                          ,(concat wen-org-dir "/notes")
                          ,(concat wen-org-dir "/notes/work")))

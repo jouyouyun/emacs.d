@@ -34,6 +34,6 @@
 ;; 切换全角标点与半角标点
 (global-set-key (kbd "C-M-;") 'pyim-toggle-full-width-punctuation)
 ;; 设置光标跟随
-;; (setq pyim-use-tooltip t)
+(setq pyim-use-tooltip nil)
 
 (provide 'wen-pinyin)

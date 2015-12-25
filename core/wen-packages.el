@@ -57,7 +57,9 @@
     yasnippet
     chinese-pyim
     youdao-dictionary
-    zenburn-theme))
+    material-theme
+    ;; zenburn-theme
+    ))
 
 ;; Check if all packages in 'wen-packages' are installed
 (defun wen-packages-installed-p ()

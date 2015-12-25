@@ -6,7 +6,8 @@
 (setq inhibit-startup-screen t)
 
 ;; use zenburn as the default theme
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+(load-theme 'material t)
 
 ;; mode line settings
 (global-linum-mode t)

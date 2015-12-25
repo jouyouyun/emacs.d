@@ -66,7 +66,7 @@
     "Press <C-c c> to open org capture."
     "Press <C-c b> to switch org buffer."
     "Press <C-c s g> to search in Google."
-    "Press <M-\\> to call sdcv."
+    "Press <C-c S-\\> to call youdao dict."
     "Access the official Emacs manual by pressing <C-h r>."
     "Visit the EmacsWiki at http://emacswiki.org to find out even more about Emacs."))
 
