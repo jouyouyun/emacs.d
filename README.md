@@ -10,3 +10,6 @@
 
 * cmake, libclang
 >>For irony or ycmd, irony need run 'irony-install-server' at first.
+
+* python-pip
+>>For anaconda

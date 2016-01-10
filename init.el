@@ -80,12 +80,12 @@
 (message "Loading Wen's modules...")
 
 ;; the modules
-;; (require 'wen-c-ycmd)
+(require 'wen-c-ycmd)
+;; (require 'wen-c-irony)
 (require 'wen-go)
 (require 'wen-python)
 (require 'wen-qml)
 (require 'wen-web)
-(require 'wen-c-irony)
 
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" wen-personal-dir))
