@@ -29,8 +29,6 @@
 (defvar wen-personal-preload-dir (expand-file-name "preload" wen-personal-dir))
 ;; This folder stores all the automatically generated save/history-files.
 (defvar wen-savefile-dir (expand-file-name "savefile" wen-dir))
-;; This files contains a list of modules that will be loaded.
-(defvar wen-modules-file (expand-file-name "wen-modules.el" wen-dir))
 
 (unless (file-exists-p wen-savefile-dir)
   (make-directory wen-savefile-dir))
@@ -72,6 +70,7 @@
 (require 'wen-helm)
 (require 'wen-editor)
 (require 'wen-window)
+(require 'wen-c)
 (require 'wen-orgmode)
 (require 'wen-git)
 (require 'wen-files)
@@ -81,10 +80,12 @@
 (message "Loading Wen's modules...")
 
 ;; the modules
- (if (file-exists-p wen-modules-file)
-     (load wen-modules-file)
-   (message "Missing modules file %s" wen-modules-file)
-   (message "You can get started by copying the bundled example file"))
+;; (require 'wen-c-ycmd)
+(require 'wen-go)
+(require 'wen-python)
+(require 'wen-qml)
+(require 'wen-web)
+(require 'wen-c-irony)
 
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" wen-personal-dir))

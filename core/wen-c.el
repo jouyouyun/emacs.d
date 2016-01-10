@@ -2,14 +2,11 @@
 
 (wen-require-packages '(
                         c-eldoc
-                        ycmd
-                        company-ycmd
-                        flycheck-ycmd
-                        company-c-headers
+			cpputils-cmake
+			company-c-headers
                         ))
 
 (require 'c-eldoc)
-(require 'ycmd)
 
 ;; c-mode
 (defun wen-cc-mode-setup()
@@ -22,26 +19,18 @@
   (add-to-list 'auto-mode-alist '("\\.h$" . c-mode)))
 
 (wen-cc-mode-setup)
+(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
+(add-hook 'c++-mode-hook 'c-turn-on-eldoc-mode)
 
-(add-hook 'c-mode-hook '(lambda ()
-                          (ycmd-mode)
-                          (c-turn-on-eldoc-mode)
-                          ))
 
-(add-hook 'c++-mode-hook '(lambda ()
-                            (ycmd-mode)
-                            (c-turn-on-eldoc-mode)
-                            ))
+;; cpputils-cmake
+(require 'cpputils-cmake)
 
-;; company-ycmd
-;; depends: ycmd
-(require 'company-ycmd)
-(company-ycmd-setup)
-(require 'flycheck-ycmd)
-(flycheck-ycmd-setup)
-;; TODO: compile ycmd
-(set-variable 'ycmd-server-command '("python" "/Data/Projects/Private/ycmd/ycmd"))
-(set-variable 'ycmd-global-config "~/.ycm_extra_conf.py")
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (if (derived-mode-p 'c-mode 'c++-mode)
+                (cppcm-reload-all)
+              )))
 
 ;; company-c-header
 ;; TODO: set 'company-c-headers-path-system'
