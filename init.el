@@ -80,7 +80,7 @@
 (message "Loading Wen's modules...")
 
 ;; the modules
-(require 'wen-c-ycmd)
+;; (require 'wen-c-ycmd)
 ;; (require 'wen-c-irony)
 (require 'wen-go)
 (require 'wen-python)
@@ -102,6 +102,12 @@
 
 ;; server mode
 (server-start)
+
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
 
 ;;; set variables
 (custom-set-variables

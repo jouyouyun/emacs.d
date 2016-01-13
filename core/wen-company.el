@@ -26,25 +26,26 @@
 (setq company-tooltip-flip-when-above t)
 (add-hook 'after-init-hook 'global-company-mode)
 ;; company-dabbrev
-;; (setq company-dabbrev-code-everywhere t)
+(setq company-dabbrev-code-everywhere t)
 ;; (global-set-key (kbd "M-/") 'company-dabbrev)
 ;; Customsize company backends
-(setq-local company-backends '((
-                                company-capf
-                                company-dabbrev
-                                company-files
-                                company-abbrev
-                                company-keywords
-                                company-semantic
-                                company-yasnippet
-                                company-clang
-                                company-css
-                                company-cmake
-                                company-elisp
-                                company-etags
-                                company-nxml
-                                company-pkg
-                                )))
+;; (setq-local company-backends '((
+;;                                 company-capf
+;;                                 company-dabbrev
+;;                                 company-files
+;;                                 company-abbrev
+;;                                 company-keywords
+;;                                 company-semantic
+;;                                 company-yasnippet
+;;                                 company-clang
+;;                                 company-css
+;;                                 company-cmake
+;;                                 company-elisp
+;;                                 company-etags
+;;                                 company-nxml
+;;                                 company-pkg
+;;                                 )))
+
 ;; color
 (custom-set-faces
  '(company-preview

@@ -113,7 +113,7 @@ c-s-s-b 插上鼠标
 c-t 冲突
 c-w 错误 除外
 c-w-t 此问题
-c-x 程序 重写 出现 查询 重现 宠携
+c-x 重写 程序 出现 查询 重现 宠携
 c-x-m 程序名
 c-z 查找 存在 操作 重置
 cai 才
@@ -292,7 +292,7 @@ fu-zhi 复制
 g 构 个 更 各 给 改 管 过 挂 高
 g-b 改变 光标 关闭
 g-d 归档 更多 跟多 挂掉 刮掉
-g-g 各个 更改
+g-g 更改 各个
 g-j 更加 感觉 根据 构建 关机
 g-l 过滤 管理 改了
 g-l-y 管理员
@@ -344,7 +344,7 @@ guang-biao 光标
 gui-dang 归档
 guo 过
 guo-lv 过滤
-h 和 好 后 还 很 会 红 耗 慧
+h 后 和 好 还 很 会 红 耗 慧
 h-b 合并
 h-c-x 会出现
 h-d 后端 好的
@@ -396,7 +396,7 @@ huo 和
 huo-ni-yi-qi-zou 和你一齐奏
 huo-qu 获取
 huo-zhe 或者
-j 将 就 及 旧 久 经 给 机 监 静 交
+j 救 就 将 及 旧 久 经 给 机 监 静 交
 j-b 基本
 j-c 检查 检测 基础 进程
 j-d 较大 阶段
@@ -462,7 +462,7 @@ jing 经 静
 jing-guo 经过
 jing-jian 精简
 jing-yin 静音
-jiu 就 旧 久
+jiu 救 就 旧 久
 jiu-hao-le 就好了
 jiu-hui 就会 酒会
 jiu-shi 就是
@@ -788,7 +788,7 @@ t 它 图 太 同 铜 听 塔 头 他
 t-b 同步 图标
 t-c 退出
 t-d 替代 太多 特定 太大
-t-g 提高 提供 通过 同更
+t-g 通过 提高 提供 同更
 t-h 替换
 t-j 添加 调节
 t-m-l 太慢了
@@ -938,7 +938,7 @@ y-b 以便 一遍 异步 一步 也被 一般
 y-c 一次 隐藏 移除
 y-d 遇到 一定 应对
 y-f 叶飞
-y-g 有个 一个 应该
+y-g 有关 有个 一个 应该
 y-h 优化 运行 用户
 y-j 以及 语句 研究
 y-l 原理 依赖 音量 用来
@@ -991,6 +991,7 @@ yong-hu 用户
 yong-lai 用来
 you 有 又 由
 you-ge 有个
+you-guan 有关
 you-hua 优化
 you-wen-ti 有问题
 you-wu 有误
