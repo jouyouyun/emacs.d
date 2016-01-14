@@ -33,75 +33,56 @@
 (add-hook 'c++-mode-hook 'wen-c-headers-company)
 
 ;; autocomplete via company-clang
-(defvar wen-c-clang-args '(
-                           "-I/usr/include/glib-2.0"
-                           "-I/usr/include/gtk-3.0/gtk"
-                           "-I/usr/include/gtk-3.0/gdk"
-                           "-I/usr/include/cairo"
-                           "-I/usr/include/librsvg-2.0"
-                           "-I/usr/include/gdk-pixbuf-2.0/gdk-pixbuf"
-                           "-I/usr/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib"
-                           "-I/usr/include/poppler/glib"
-                           "-I/usr/include/fontconfig"
-                           "-I/usr/include/freetype2"
-                           "-I/usr/include/lightdm-gobject-1"
-                           "-I/usr/include/X11"
-                           "-I/usr/include/X11/Xcursor"
-                           "-I/usr/include/X11/extensions"
-                           "-I/usr/include/xcb"
-                           "-I/usr/include/pulse"
-                           "-D_DEBUG"
-                           ))
+(defun wen-pkg-config-enable-clang-flag (pkg-config-lib)
+  "This function will add necessary header file path of a
+specified by `pkg-config-lib' to `company-clang-arguments', which make it
+completionable by company-clang"
+  (interactive "spkg-config lib: ")
+  (if (executable-find "pkg-config")
+      (if (= (shell-command
+              (format "pkg-config %s" pkg-config-lib))
+             0)
+          (setq company-clang-arguments
+                (append company-clang-arguments
+                        (split-string
+                         (shell-command-to-string
+                          (format "pkg-config --cflags-only-I %s"
+                                  pkg-config-lib)))))
+        (message "Error, pkg-config lib %s not found." pkg-config-lib))
+    (message "Error: pkg-config tool not found.")))
 
-;; (setq wen-c-clang-args
-;;       (substring
-;;        (shell-command-to-string "/usr/bin/pkg-config --cflags --libs gtk+-3.0 x11 xtst xcursor")
-;;        0 -1))
-
-
-(defvar wen-cpp-clang-args '(
-                             "-I/usr/include/c++/5"
-                             ;; deepin
-                             ;;"-I/usr/include/x86_64-linux-gnu/qt5/QtGui"
-                             ;;"-I/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
-                             ;;"-I/usr/include/x86_64-linux-gnu/qt5/QtDBus"
-                             ;;"-I/usr/include/x86_64-linux-gnu/qt5/QtSql"
-                             ;;"-I/usr/include/x86_64-linux-gnu/qt5/QtSvg"
-                             ;;"-I/usr/include/x86_64-linux-gnu/qt5/QtXml"
-                             ;;"-I/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
-                             ;; arch
-                             ;;"-I/usr/include/qt/QtCore"
-                             ;;"-I/usr/include/qt/QtGui"
-                             ;;"-I/usr/include/qt/QtWidgets"
-                             ;;"-I/usr/include/qt/QtDBus"
-                             ;;"-I/usr/include/qt/QtSql"
-                             ;;"-I/usr/include/qt/QtSvg"
-                             ;;"-I/usr/include/qt/QtXml"
-                             ;;"-I/usr/include/qt/QtNetwork"
-                             ;; "-I/usr/include/qt/QtX11Extras"
-                             ;;"-DQT_CORE_LIB"
-                             ;;"-DQT_GUI_LIB"
-                             ;;"-DQT_NETWORK_LIB"
-                             ;;"-DQT_QML_LIB"
-                             ;;"-DQT_SQL_LIB"
-                             ;;"-DQT_WIDGETS_LIB"
-                             ;;"-DQT_XML_LIB"
-                             "-D_DEBUG"
-                             ))
-;; (setq wen-cpp-clang-args
-;;       (substring
-;;        (shell-command-to-string "/usr/bin/pkg-config --cflags --libs Qt5Core Qt5Gui Qt5DBus Qt5Network Qt5Sql Qt5Svg Qt5Widgets")
-;;        0 -1))
-
-(defun wen-set-clang-args (args)
-  (set 'company-clang-arguments args)
-  (set 'flycheck-clang-args args))
+(defun set-common-clang-args ()
+  (setq command "echo | g++ -v -x c++ -E - 2>&1 |
+                 grep -A 20 starts | grep include | grep -v search")
+  (setq company-clang-arguments
+        (mapcar (lambda (item)
+                  (concat "-I" item))
+                (split-string
+                 (shell-command-to-string command))))
+  )
 
 (defun wen-set-c-clang-args ()
-  (wen-set-clang-args wen-c-clang-args))
+  (set-common-clang-args)
+  (wen-pkg-config-enable-clang-flag "gtk+-3.0")
+  (wen-pkg-config-enable-clang-flag "fontconfig")
+  (wen-pkg-config-enable-clang-flag "popper-glib")
+  (wen-pkg-config-enable-clang-flag "libpulse-mainloop-glib")
+  (wen-pkg-config-enable-clang-flag "librsvg-2.0")
+  (set 'flycheck-clang-args company-clang-arguments)
+  )
 
 (defun wen-set-cpp-clang-args ()
-  (wen-set-clang-args wen-cpp-clang-args))
+  (set-common-clang-args)
+  (wen-pkg-config-enable-clang-flag "Qt5Core")
+  (wen-pkg-config-enable-clang-flag "Qt5Gui")
+  (wen-pkg-config-enable-clang-flag "Qt5Widgets")
+  (wen-pkg-config-enable-clang-flag "Qt5DBus")
+  (wen-pkg-config-enable-clang-flag "Qt5Network")
+  (wen-pkg-config-enable-clang-flag "Qt5Sql")
+  (wen-pkg-config-enable-clang-flag "Qt5Svg")
+  (wen-pkg-config-enable-clang-flag "Qt5Xml")
+  (set 'flycheck-clang-args company-clang-arguments)
+  )
 
 (add-hook 'c-mode-hook 'wen-set-c-clang-args)
 (add-hook 'c++-mode-hook 'wen-set-cpp-clang-args)

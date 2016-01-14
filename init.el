@@ -80,8 +80,6 @@
 (message "Loading Wen's modules...")
 
 ;; the modules
-;; (require 'wen-c-ycmd)
-;; (require 'wen-c-irony)
 (require 'wen-go)
 (require 'wen-python)
 (require 'wen-qml)

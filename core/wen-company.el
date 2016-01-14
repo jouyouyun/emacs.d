@@ -30,20 +30,10 @@
 ;; (global-set-key (kbd "M-/") 'company-dabbrev)
 ;; Customsize company backends
 ;; (setq-local company-backends '((
-;;                                 company-capf
 ;;                                 company-dabbrev
 ;;                                 company-files
 ;;                                 company-abbrev
 ;;                                 company-keywords
-;;                                 company-semantic
-;;                                 company-yasnippet
-;;                                 company-clang
-;;                                 company-css
-;;                                 company-cmake
-;;                                 company-elisp
-;;                                 company-etags
-;;                                 company-nxml
-;;                                 company-pkg
 ;;                                 )))
 
 ;; color
