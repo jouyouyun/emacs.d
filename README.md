@@ -9,7 +9,13 @@
 ## Depends
 
 * cmake, libclang
->>For irony or ycmd, irony need run 'irony-install-server' at first.
+
+>For company or irony or ycmd, irony need run `irony-install-server` at first.
 
 * python-pip
->>For anaconda
+
+>For anaconda
+
+* pandoc, markdown
+
+> Markdown Preview
