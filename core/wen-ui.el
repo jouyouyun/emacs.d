@@ -53,4 +53,9 @@
 ;; Set alpha (90, 60)
 ;; (loop-alpha)
 
+
+;; status line
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
+
 (provide 'wen-ui)

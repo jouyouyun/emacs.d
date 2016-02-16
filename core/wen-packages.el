@@ -58,6 +58,7 @@
     chinese-pyim
     youdao-dictionary
     material-theme
+    smart-mode-line
     ;; zenburn-theme
     ))
 
