@@ -41,8 +41,7 @@
     (org-edit-src-code)))
 
 ;; 导出语法高亮的Source Code
-(setq org-src-fontify-natively t)
-
+(setq org-src-fontify-natively nil)
 
 ;; Standard key bindings
 (global-set-key "\C-cl" 'org-store-link)
@@ -256,5 +255,42 @@ unwanted space when exporting org-mode to html."
                                   "\\) *\n *\\(" reg-han "\\)")
                           "\\1\\2" orig-contents))
     (ad-set-arg 1 fixed-contents)))
+
+;; Org publish
+(setq org-publish-project-alist
+      '(
+        ("blog-notes"
+         :base-directory "/Data/org/blog/"
+         :base-extension "org"
+         :publishing-directory "/Data/Blog/jouyouyun.github.io/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4
+         :auto-preamble t
+         :section-numbers nil
+         :author "jouyouyun"
+         :email "jouyouwen717 at gmail dot com"
+         :auto-sitemap t                  ; Generate sitemap.org automagically...
+         :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
+         :sitemap-title "Sitemap"         ; ... with title 'Sitemap'.
+         :sitemap-sort-files anti-chronologically
+         :sitemap-file-entry-format "%d %t"
+         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/worg.css\"/>
+<link rel=\"stylesheet\" type=\"text/css\" href=\"css/highlight/default.css\"/>
+<script type=\"text/javascript\" src=\"js/highlight.pack.js\"></script>
+<script>hljs.initHighlightingOnLoad();</script>"
+         :html-postamble nil
+         ;; :html-head-include-default-style nil
+         ;; :html-head-include-scripts nil
+         )
+        ("blog-static"
+         :base-directory "/Data/org/blog/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "/Data/Blog/jouyouyun.github.io/"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("blog" :components ("blog-notes" "blog-static"))
+        ))
 
 (provide 'wen-orgmode)
