@@ -239,9 +239,9 @@
 (wen-require-package 'ox-gfm)
 (require 'ox-gfm)
 
-;; Export Org to html5 slide
-(wen-require-package 'ox-html5slide)
-(require 'ox-html5slide)
+;; Export Org to google style html5 slide
+(wen-require-package 'ox-ioslide)
+(require 'ox-ioslide)
 
 (defadvice org-html-paragraph (before fsh-org-html-paragraph-advice
                                       (paragraph contents info) activate)

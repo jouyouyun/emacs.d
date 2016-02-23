@@ -135,7 +135,7 @@ c-p 磁盘 产品
 c-q 重启
 c-r 传入 闯入
 c-r-w 此任务
-c-s 参数 测试 产生 尝试 测锁 插上
+c-s 测试 参数 产生 尝试 测锁 插上
 c-s-h 初始化
 c-s-s-b 插上鼠标
 c-t 冲突
@@ -215,7 +215,7 @@ cui-cu 催促
 cun-zai 存在
 cuo 错
 cuo-wu 错误
-d 的 到 等 对 都 掉 道 段 打 但 读 多 调 度 点 得 待 顶 端
+d 的 带 代 到 等 对 都 掉 道 段 打 但 读 多 调 度 点 得 待 顶 端
 d-b 打包 对比
 d-b-z 但不知
 d-c 电池 当成 低层 导出 但重
@@ -254,7 +254,7 @@ da-shang 打上
 da-ti 大体
 da-xiao 大小
 da-yin 打印
-dai 待
+dai 带 代 待
 dai-ji 待机 代及
 dai-li 代理
 dai-ma 代码
@@ -518,7 +518,7 @@ huo-qu 获取
 huo-zhe 或者
 j 就 键 具 间 及 检 即 见 加 经 迹 将 救 旧 久 给 机 监 静 交
 j-b 局部 基本
-j-c 检测 经常 检查 进程 基础
+j-c 基础 检测 经常 检查 进程
 j-c-l 及处理
 j-d 简单 较大 阶段
 j-g 结果 结构 交给 经过 禁果
@@ -674,7 +674,7 @@ kuang 框
 l 来 了 里 另 理 例 乱
 l-b 列表
 l-c 流程
-l-d 里的 亮度 乱掉
+l-d 亮度 里的 乱掉
 l-g 两个
 l-j 连接 了解 路径 立即 逻辑 链接
 l-j-d 了解到
@@ -720,7 +720,7 @@ luan 乱
 luan-diao 乱掉
 luan-ma 乱马
 luo-ji 逻辑
-m 末 每 名 某 目 慢 没 面 码 枚
+m 慢 没 末 每 名 某 目 面 码 枚
 m-b 目标
 m-c 每次 名称
 m-d 目的 每段
@@ -729,6 +729,7 @@ m-g 每隔
 m-k 模块
 m-l 命令 目录
 m-m 慢慢
+m-n 没能
 m-r 默认
 m-r-c-x 默认程序
 m-s 描述 模式
@@ -741,10 +742,11 @@ ma-fan 麻烦
 man 慢
 man-man 慢慢
 man-zu 满足
-mei 每 没 枚
+mei 没 每 枚
 mei-ci 每次
 mei-duan 每段
 mei-ge 每隔
+mei-neng 没能
 mei-tiao 每条
 mei-wen-ti 没问题
 mei-yong 没用
@@ -765,7 +767,7 @@ mu 目
 mu-biao 目标
 mu-de 目的
 mu-lu 目录
-n 你 那 能 内
+n 能 你 那 内
 n-c 内存 年初
 n-d 你的
 n-f 能否
@@ -836,7 +838,7 @@ pu-bian-xing 普遍性
 q 去 前 其 器 全 请 启 区
 q-b 确保
 q-c 清楚
-q-d 驱动 前端 启动 确定 去掉
+q-d 去掉 启动 驱动 前端 确定
 q-f 缺乏
 q-h 前后 切换
 q-j 全局
@@ -887,7 +889,7 @@ que-shao 缺少
 r 让 如 若 仍 入 热
 r-e 然而
 r-g 如果
-r-h 如何 然后
+r-h 然后 如何
 r-j 软件
 r-l 容量
 r-q 热区
@@ -914,8 +916,8 @@ ru-xia 如下
 ruan-jian 软件
 ruo 若
 ruo-you 若有
-s 是 时 上 盛 色 身 死 说 试 参 书 所 少 式 三 蛇 收 示 使 删 锁 谁
-s-b 失败 鼠标 顺便
+s 上 是 时 盛 色 身 死 说 试 参 书 所 少 式 三 蛇 收 示 使 删 锁 谁
+s-b 识别 失败 鼠标 顺便
 s-b-d 收不到
 s-b-d-a 收不到啊
 s-c 生成 输出 上次 首次 上层
@@ -970,6 +972,7 @@ sheng-yin 声音
 sheng-yu 剩余
 shi 是 时 试 式 示 使
 shi-bai 失败
+shi-bie 识别
 shi-de 使得
 shi-fang 释放
 shi-fou 是否
@@ -1027,7 +1030,7 @@ t-c 通常 退出
 t-d 替代 太多 特定 太大
 t-g 通过 提供 提高 同更
 t-h 替换
-t-j 条件 添加 推荐 调节
+t-j 调节 条件 添加 推荐
 t-l 调了
 t-m-l 太慢了
 t-p 图片 秃瓢
@@ -1237,7 +1240,7 @@ y-m 以免
 y-p 硬盘 音频
 y-q 与其 以前
 y-r 移入
-y-s 样式 要是 有时 于是 压缩 延时
+y-s 延时 样式 要是 有时 于是 压缩
 y-t 一条
 y-w 因为 有无 有误
 y-w-c 一完成
