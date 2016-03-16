@@ -47,6 +47,7 @@
     "Press <C-x c g> to grep file by helm."
     "Press <C-x c o> to search input key by helm-occur."
     "Press <M-?> to search input key by helm-ag."
+    "Press <C-x f> to find files in project."
     "Press <C-\> to toggle default input method."
     "Press <C-M-;> to toggle pinyin full or width punctuation."
     "Press <C-c M-t> to open multi term."

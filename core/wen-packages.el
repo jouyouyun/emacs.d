@@ -20,6 +20,7 @@
   '(helm
     helm-firefox
     helm-ls-git
+    fiplr ;; find files in project
     avy
     multiple-cursors
     ;; browse-kill-ring ;; see 'popup-kill-ring'
