@@ -43,8 +43,8 @@
 (when (executable-find "ag")
   (wen-require-package 'helm-ag)
   (global-set-key (kbd "M-?") 'helm-ag)
-  (custom-set-variables
-   '(helm-follow-mode-persistent t))
+  ;; (custom-set-variables
+  ;;  '(helm-follow-mode-persistent t))
   )
 
 
