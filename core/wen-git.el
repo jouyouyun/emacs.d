@@ -6,8 +6,9 @@
           (lambda ()
             (evil-local-mode -1)))
 
-(require 'git-gutter-fringe)
-(global-git-gutter-mode)
+(require 'git-gutter+)
+(require 'git-gutter-fringe+)
+(global-git-gutter+-mode)
 
 (dolist (mode-hook '(text-mode-hook prog-mode-hook))
   (add-hook mode-hook
@@ -17,17 +18,17 @@
               (setq right-fringe-width 4))))
 
 ;; some keybindings
-(global-set-key (kbd "C-x v g") 'git-gutter:toggle)
-(global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
+(global-set-key (kbd "C-x v g") 'git-gutter+:toggle)
+(global-set-key (kbd "C-x v =") 'git-gutter+:popup-hunk)
 ;; Jump to next/previous hunk
-(global-set-key (kbd "C-x v p") 'git-gutter:previous-hunk)
-(global-set-key (kbd "C-x v n") 'git-gutter:next-hunk)
+(global-set-key (kbd "C-x v p") 'git-gutter+:previous-hunk)
+(global-set-key (kbd "C-x v n") 'git-gutter+:next-hunk)
 ;; Stage current hunk
-(global-set-key (kbd "C-x v s") 'git-gutter:stage-hunk)
+(global-set-key (kbd "C-x v s") 'git-gutter+:stage-hunk)
 ;; Revert current hunk
-(global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
+(global-set-key (kbd "C-x v r") 'git-gutter+:revert-hunk)
 ;; improve performance
-(setq git-gutter:update-hooks '(after-save-hook after-revert-hook))
+(setq git-gutter+:update-hooks '(after-save-hook after-revert-hook))
 
 ;; gist
 ;;    g : reload the gist list from server

@@ -18,6 +18,7 @@
 ;; a list of packages to ensure are installed at launch.
 (defvar wen-packages
   '(helm
+    dired+ ;; fixed 'diredp-file-name' undefined
     helm-firefox
     helm-ls-git
     fiplr ;; find files in project
@@ -34,7 +35,8 @@
     ace-window
     gist
     magit
-    git-gutter-fringe
+    git-gutter+
+    git-gutter-fringe+ ;; fixed 'git-gutter-hunk-start-line' undefined
     git-timemachine
     gitconfig-mode
     gitignore-mode

@@ -3,6 +3,10 @@
 (when (version< emacs-version "24.1")
   (error "Wen requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
 
+;; not check signature
+;; fixed seq signature not found
+(setq package-check-signature nil)
+
 ;; enable debug
 (setq debug-on-error t)
 

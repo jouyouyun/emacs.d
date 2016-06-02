@@ -110,5 +110,6 @@
                             (files ("*.jpg" "*.png" "*.zip" "*~"))))
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
+(global-unset-key (kbd "C-z"))
 
 (provide 'wen-basic)

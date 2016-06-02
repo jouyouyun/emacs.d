@@ -1,5 +1,7 @@
 ;;; 'wen-ui' --- Emacs ui selection.
 
+(require 'dired+)
+
 (require 'linum)
 
 ;; disable startup screen
