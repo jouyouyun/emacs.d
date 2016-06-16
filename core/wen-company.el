@@ -16,7 +16,7 @@
 ;; <tab> to complete the common part. Search through the completions
 ;; with C-s, C-r and C-o. Press M-(digit) to quickly complete with
 ;; one of the first 10 candidates.
-;(setq company-idle-delay 0.5)
+(setq company-idle-delay 0.3)
 (setq company-tooltip-limit 10)
 (setq company-minimum-prefix-length 2)
 ;; start autocompletion only after typing

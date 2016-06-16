@@ -7,14 +7,15 @@
 (exec-path-from-shell-initialize)
 ;; Custom env
 (dolist (var
-	  '("PATH"
-	    "HOME"
-	    "PRJ"
-	    "SYNC"
-	    "CONFIG"
-            "GOPATH"
-            "GOPKG"
-	    "GOSRC"))
+         '("PATH"
+           "DATA"
+           "HOME"
+           "PRJ"
+           "SYNC"
+           "CONFIG"
+           "GOPATH"
+           "GOPKG"
+           "GOSRC"))
   (exec-path-from-shell-copy-env var))
 
 (require 'multi-term)

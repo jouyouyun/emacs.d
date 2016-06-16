@@ -1,11 +1,11 @@
 ;;; 'wen-c.el' --- Emacs c/c++ selection
 
 (wen-require-packages '(
-                        c-eldoc
+                        ;; c-eldoc
 			company-c-headers
                         ))
 
-(require 'c-eldoc)
+;; (require 'c-eldoc)
 
 ;; c-mode
 (defun wen-cc-mode-setup()
@@ -20,8 +20,10 @@
   )
 
 (wen-cc-mode-setup)
-(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
-(add-hook 'c++-mode-hook 'c-turn-on-eldoc-mode)
+
+;; disable c-eldoc to solve emacs block
+;; (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
+;; (add-hook 'c++-mode-hook 'c-turn-on-eldoc-mode)
 
 ;; company-c-header
 ;; TODO: set 'company-c-headers-path-system'
