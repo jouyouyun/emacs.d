@@ -239,9 +239,8 @@
 (wen-require-package 'ox-gfm)
 (require 'ox-gfm)
 
-;; Export Org to google style html5 slide
-(wen-require-package 'ox-ioslide)
-(require 'ox-ioslide)
+(wen-require-package 'ox-reveal)
+;; (setq org-reveal-root "file:///Data/DE/Public/reveal.js")
 
 (defadvice org-html-paragraph (before fsh-org-html-paragraph-advice
                                       (paragraph contents info) activate)
