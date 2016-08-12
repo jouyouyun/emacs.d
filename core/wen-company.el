@@ -75,8 +75,8 @@
 
 ;; readline-complete
 ;; complete for emacs shell
-(require 'readline-complete)
-(add-to-list 'company-backends 'readline-complete)
+;; (require 'readline-complete)
+;; (add-to-list 'company-backends 'readline-complete)
 
 ;; company-math for unicode and latex
 (require 'company-math)

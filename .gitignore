@@ -27,3 +27,4 @@ anaconda-mode
 ido.last
 bookmarks
 pyim/*.txt
+pyim/cache
