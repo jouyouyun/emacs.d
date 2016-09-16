@@ -14,6 +14,7 @@
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i")
 
+(require 'elpy)
 ;; elpy
 ;; depends: jedi, flake8, importmagic, autopep8, yapf
 ;; query config 'M-x elpy-config'
@@ -29,13 +30,14 @@
     (add-hook 'elpy-mode-hook 'flycheck-mode))
   )
 
+(require 'company-jedi)
 (eval-after-load "python"
   `(progn
      (wen-elpy-setup)
      (add-hook 'python-mode-hook 'eldoc-mode)
      ;; Standard Jedi.el setting
-     (add-hook 'python-mode-hook 'jedi:setup)
-     (setq jedi:complete-on-dot t)
+     ;(add-hook 'python-mode-hook 'jedi:setup)
+     ;(setq jedi:complete-on-dot t)
      (add-to-list 'company-backends 'company-jedi)
      ))
 
