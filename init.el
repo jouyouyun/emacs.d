@@ -87,6 +87,7 @@
 (require 'wen-files)
 (require 'wen-pinyin)
 (require 'wen-tip)
+(require 'wen-template)
 
 (message "Loading Wen's modules...")
 
