@@ -1,5 +1,12 @@
 ;;; init.el --- Wen's configuration entry point.
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (when (version< emacs-version "24.1")
   (error "Wen requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
 
@@ -86,6 +93,7 @@
 ;; the modules
 (require 'wen-go)
 (require 'wen-python)
+(require 'wen-ruby)
 (require 'wen-qml)
 (require 'wen-web)
 
