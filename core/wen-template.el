@@ -81,6 +81,8 @@
   '(define-auto-insert '("\\.rb\\'" . "Ruby skeleton")
      '(
        "Short description: "
+       "#!/usr/bin/ruby -w\n"
+       "# -*-coding: utf-8 -*-\n\n"
        "###\n"
        " # Copyright (C) " (format-time-string "%Y") " jouyouyun <jouyouwen717@gmail.com>\n"
        " # \n"
@@ -93,15 +95,15 @@
        " -- " str
        "\n #"
        " Written on " (format-time-string "%A, %e %B %Y.")
-       "\n ###\n\n"
-       "#!/usr/bin/ruby -w" \n
-       "#-*-coding: utf-8 -*-" \n \n)))
+       "\n###" \n \n)))
 
 ;; python
 (eval-after-load 'autoinsert
   '(define-auto-insert '("\\.py\\'" . "Python skeleton")
      '(
        "Short description: "
+       "#!/usr/bin/env python3\n"
+       "# -*-coding: utf-8 -*-\n\n"
        "###\n"
        " # Copyright (C) " (format-time-string "%Y") " jouyouyun <jouyouwen717@gmail.com>\n"
        " # \n"
@@ -114,15 +116,14 @@
        " -- " str
        "\n #"
        " Written on " (format-time-string "%A, %e %B %Y.")
-       "\n ###\n\n"
-       "#!/usr/bin/env python3" \n
-       "#-*-coding: utf-8 -*-" \n \n)))
+       "\n###" \n \n)))
 
 ;; shell
 (eval-after-load 'autoinsert
   '(define-auto-insert '("\\.sh\\'" . "Shell skeleton")
      '(
        "Short description: "
+       "#!/bin/bash\n\n"
        "###\n"
        " # Copyright (C) " (format-time-string "%Y") " jouyouyun <jouyouwen717@gmail.com>\n"
        " # \n"
@@ -135,8 +136,7 @@
        " -- " str
        "\n #"
        " Written on " (format-time-string "%A, %e %B %Y.")
-       "\n ###\n\n"
-       "#!/bin/bash" \n \n)))
+       "\n###" \n \n)))
 
 
 (provide 'wen-template)
